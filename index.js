@@ -40,13 +40,32 @@
  *? Напишіть цикл, який виводить у консоль
  *? всі непарні числа  від max до min  за спаданням
  */
-const a = 50;
-const b = 23;
-function sowNamber(max, min) {
-  for (let i = max; i >= min; i--) {
-    if (i % 2 !== 0) {
-      console.log(i);
-    }
-  }
-}
-sowNamber(a, b);
+// const a = 50;
+// const b = 23;
+// function sowNamber(max, min) {
+//   for (let i = max; i >= min; i--) {
+//     if (i % 2 !== 0) {
+//       console.log(i);
+//     }
+//   }
+// }
+// sowNamber(a, b);
+
+/**
+ *? За допомогою циклу for складіть усі парні числа від min до max
+ */
+
+// const max = 50;
+// const min = 0;
+
+// function culcTotal(max, min) {
+//   let total = 0;
+//   for (let i = min; i <= max; i++) {
+//     if (!(i % 2)) {
+//       total += i;
+//     }
+//   }
+//   return total;
+// }
+// const result = culcTotal(max, min);
+// console.log(result);
