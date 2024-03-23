@@ -35,3 +35,18 @@
 //   console.log(`${hours}:${minutes}`);
 // }
 // convertTime(time);
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? всі непарні числа  від max до min  за спаданням
+ */
+const a = 50;
+const b = 23;
+function sowNamber(max, min) {
+  for (let i = max; i >= min; i--) {
+    if (i % 2 !== 0) {
+      console.log(i);
+    }
+  }
+}
+sowNamber(a, b);
