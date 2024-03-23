@@ -69,3 +69,24 @@
 // }
 // const result = culcTotal(max, min);
 // console.log(result);
+
+/**
+ *? У змінній min лежить число від 0 до 59.
+ *? Визначте, в яку чверть години потрапляє
+ *? це число (у першу, другу, третю чи четверту).
+ */
+const min = 11;
+function partNumber(number) {
+    if (number > 0 && number <= 15) {
+        console.log ("first part")
+    } else if (number > 15 && number <= 30) {
+        console.log ("second part")
+    }
+    else if (number > 30 && number <= 45) {
+        console.log ("third part")
+    }
+    else {
+        console.log ("fourth part")
+    }
+}
+partNumber(min);
