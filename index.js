@@ -181,3 +181,36 @@
 
 // console.log(updateFruits(fruits));
 // console.log(fruits);
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+// const arr = ["best", "the", "foo", "is", "js"];
+// const newArray = [...arr];
+// const idx = newArray.indexOf("foo");
+// newArray.splice(idx, 1);
+// newArray.reverse();
+// console.log(newArray.join(" "));
+// console.log(arr);
+
+
+// const string = arr
+//   .slice(0, arr.indexOf("foo"))
+//   .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+//   .reverse()
+//     .join(" ");
+// console.log(string);
+
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+console.log(checkBrackets(someFn));
