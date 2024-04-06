@@ -75,18 +75,44 @@
  *? Визначте, в яку чверть години потрапляє
  *? це число (у першу, другу, третю чи четверту).
  */
-const min = 11;
-function partNumber(number) {
-    if (number > 0 && number <= 15) {
-        console.log ("first part")
-    } else if (number > 15 && number <= 30) {
-        console.log ("second part")
-    }
-    else if (number > 30 && number <= 45) {
-        console.log ("third part")
-    }
-    else {
-        console.log ("fourth part")
-    }
-}
-partNumber(min);
+// const min = 11;
+// function partNumber(number) {
+//     if (number > 0 && number <= 15) {
+//         console.log ("first part")
+//     } else if (number > 15 && number <= 30) {
+//         console.log ("second part")
+//     }
+//     else if (number > 30 && number <= 45) {
+//         console.log ("third part")
+//     }
+//     else {
+//         console.log ("fourth part")
+//     }
+// }
+// partNumber(min);
+
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
