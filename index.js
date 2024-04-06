@@ -116,3 +116,18 @@
 // for (const key of keys) {
 //   console.log(`${key}: ${user[key]}`);
 // }
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+const someObj = {
+  worker1: 360,
+  worker2: 750,
+  worker3: 240,
+};
+function culcTotalSalary(obj) {
+  let sum = 0;
+  const valeus = Object.values(obj);
+  for (const item of valeus) {
+    sum += item;
+  }
+  return sum;
+}
+console.log(culcTotalSalary(someObj));
