@@ -152,3 +152,32 @@
 //   }
 // }
 // console.log(calcTotalPrice(stones, "Изумруд"));
+
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+// const fruits = [
+//     { name: "apple", price: 200 },
+//     { name: "orange", price: 300 },
+//     { name: "grapes", price: 750 },
+// ];
+
+// function updateFruits(array) {
+//     let newArr = [];
+//     let id = 1;
+
+//     for (const item of array) {
+//         const newFruit = { ...item, price: item.price * 0.8, id }
+//         newArr.push(newFruit);
+//         id += 1;
+
+//     }
+
+//     return newArr;
+// }
+
+// console.log(updateFruits(fruits));
+// console.log(fruits);
