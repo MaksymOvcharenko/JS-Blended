@@ -299,3 +299,18 @@
 //   (a, b) => concerts[a] - concerts[b]
 // );
 // console.log(toSortedArray);
+
+//TODO:=============================================
+/**
+ *? Напиши клас Notes який управляє колекцією нотаток у
+ *? властивості items.
+ *? Нотатка - це об'єкт із властивостями id, text і priority.
+ *? Додай класу статичний метод Priopity,
+ *? який буде повертати об'єкт із пріоритетами 
+//  {
+//       HIGHT: "hight",
+//       LOW: "low",
+//     }
+ *? Додай методи addNote(note), removeNote(id)
+ *? updatePriority(id, newPriority)
+ */
