@@ -206,31 +206,47 @@
   Якщо рядок містить коректний код функція повертає true.
   В іншому випадку повертає false
 */
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
-console.log(checkBrackets(someFn));
-function checkBrackets(str) {
-  const stack = [];
-  const obj = {
-    "(": ")",
-    "{": "}",
-    "[": "]",
-  };
-  for (let i = 0; i < str.length; i++) {
-    const bracket = str[i];
-    if (bracket === "(" || bracket === "{" || bracket === "[") {
-      stack.push(bracket);
-    }
-    if (bracket === "}" || bracket === ")" || bracket === "]") {
-      const lastEl = stack.pop();
-      if (bracket !== obj[lastEl]) {
-        return false;
-      }
-    }
-  }
-  if (stack.length) return false;
-  return true;
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
+// console.log(checkBrackets(someFn));
+// function checkBrackets(str) {
+//   const stack = [];
+//   const obj = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+//   for (let i = 0; i < str.length; i++) {
+//     const bracket = str[i];
+//     if (bracket === "(" || bracket === "{" || bracket === "[") {
+//       stack.push(bracket);
+//     }
+//     if (bracket === "}" || bracket === ")" || bracket === "]") {
+//       const lastEl = stack.pop();
+//       if (bracket !== obj[lastEl]) {
+//         return false;
+//       }
+//     }
+//   }
+//   if (stack.length) return false;
+//   return true;
+// }
+// console.log(checkBrackets(someFn));
+///**
+
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+function updateFruits(arr) {
+ return arr.map((fruit, index) => {return {...fruit, price: fruit.price * 0.8, id: index+1}})
 }
-console.log(checkBrackets(someFn));
+
+console.log(updateFruits(fruits));
