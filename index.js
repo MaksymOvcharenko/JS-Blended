@@ -251,23 +251,51 @@
 
 // console.log(updateFruits(fruits));
 
-//TODO:==============================================
+// //TODO:==============================================
+// /**
+//  *? Поверніть об'єкт, в якому вказано кількість тегів.
+//  *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+//  */
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+// function calcTags(arr) {
+//   return arr
+//     .flatMap((item) => item.tags)
+//     .reduce((acc, item) => {
+//       return { ...acc, [item]: acc[item] ? acc[item] + 1 : 1 };
+//     }, {});
+// }
+// console.log(calcTags(tweets));
+
 /**
- *? Поверніть об'єкт, в якому вказано кількість тегів.
- *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
- */
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
-function calcTags(arr) {
-  return arr
-    .flatMap((item) => item.tags)
-    .reduce((acc, item) => {
-      return { ...acc, [item]: acc[item] ? acc[item] + 1 : 1 };
-    }, {});
-}
-console.log(calcTags(tweets));
+//  *? З об'єкту concerts потрібно отримати масив
+//  *? в якому будуть лише імена міст.
+//  *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+//  *? відсортувати їх у хронологічному порядку.
+//  *? Результат вивести у консоль.
+//  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+//  */
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2025-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2025-03-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2025-07-10"),
+// };
+
+// const array = Object.keys(concerts);
+// console.log(array);
+
+// const filteredArray = array.filter((item) => concerts[item] > new Date());
+// console.log(filteredArray);
+
+// const toSortedArray = filteredArray.toSorted(
+//   (a, b) => concerts[a] - concerts[b]
+// );
+// console.log(toSortedArray);
