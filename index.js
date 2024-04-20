@@ -153,7 +153,6 @@
 // }
 // console.log(calcTotalPrice(stones, "Изумруд"));
 
-
 ///**
 // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
 // *? Зробіть знижку 20 % на всі фрукти у масиві
@@ -195,14 +194,12 @@
 // console.log(newArray.join(" "));
 // console.log(arr);
 
-
 // const string = arr
 //   .slice(0, arr.indexOf("foo"))
 //   .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
 //   .reverse()
 //     .join(" ");
 // console.log(string);
-
 
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
@@ -213,4 +210,27 @@ const someFn = `function foo() {
   const arr = [1, 2, 3];
   console.log(arr);
 }`;
+console.log(checkBrackets(someFn));
+function checkBrackets(str) {
+  const stack = [];
+  const obj = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
+  for (let i = 0; i < str.length; i++) {
+    const bracket = str[i];
+    if (bracket === "(" || bracket === "{" || bracket === "[") {
+      stack.push(bracket);
+    }
+    if (bracket === "}" || bracket === ")" || bracket === "]") {
+      const lastEl = stack.pop();
+      if (bracket !== obj[lastEl]) {
+        return false;
+      }
+    }
+  }
+  if (stack.length) return false;
+  return true;
+}
 console.log(checkBrackets(someFn));
