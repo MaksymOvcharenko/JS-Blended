@@ -240,13 +240,34 @@
 // *? Зробіть знижку 20 % на всі фрукти у масиві
 // *? Надайте ід для кожного продукту
 // */
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
-function updateFruits(arr) {
- return arr.map((fruit, index) => ({...fruit, price: fruit.price * 0.8, id: index+1}))
-}
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+// function updateFruits(arr) {
+//  return arr.map((fruit, index) => ({...fruit, price: fruit.price * 0.8, id: index+1}))
+// }
 
-console.log(updateFruits(fruits));
+// console.log(updateFruits(fruits));
+
+//TODO:==============================================
+/**
+ *? Поверніть об'єкт, в якому вказано кількість тегів.
+ *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+ */
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+function calcTags(arr) {
+  return arr
+    .flatMap((item) => item.tags)
+    .reduce((acc, item) => {
+      return { ...acc, [item]: acc[item] ? acc[item] + 1 : 1 };
+    }, {});
+}
+console.log(calcTags(tweets));
