@@ -246,7 +246,7 @@ const fruits = [
   { name: "grapes", price: 750 },
 ];
 function updateFruits(arr) {
- return arr.map((fruit, index) => {return {...fruit, price: fruit.price * 0.8, id: index+1}})
+ return arr.map((fruit, index) => ({...fruit, price: fruit.price * 0.8, id: index+1}))
 }
 
 console.log(updateFruits(fruits));
