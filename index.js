@@ -88,7 +88,13 @@ addEventListener("click", (event) => {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
-
+const listItemsEL = document.querySelectorAll('.listItem');
+const btnDoubleEl = document.querySelector('#double');
+btnDoubleEl.addEventListener('click', () => {
+  listItemsEL.forEach(listItem => {
+    listItem.textContent = BigInt(listItem.textContent) ** 2n;
+  })
+})
 //TODO:==============================================
 /*
 Завдання 7
