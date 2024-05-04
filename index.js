@@ -108,14 +108,14 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 const koloEl = document.querySelector(".innerCircle");
 koloEl.addEventListener("click", () => {
   if (koloEl.style.position !== "absolute") {
-    addEventListener("mousemove", (event) => {
-      console.log(event.pageX);
-      koloEl.style.position = "absolute";
-      koloEl.style.top = event.pageY - 15 + "px";
-      koloEl.style.left = event.pageX - 15 + "px";
-      return;
-    });
+    addEventListener("mousemove", mouseMove);
   } else {
     koloEl.style.position = "static";
+    removeEventListener("mousemove", mouseMove);
   }
 });
+const mouseMove = () => {
+  koloEl.style.position = "absolute";
+  koloEl.style.top = event.pageY - 15 + "px";
+  koloEl.style.left = event.pageX - 15 + "px";
+};
