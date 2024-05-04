@@ -32,6 +32,18 @@ swapButtonEl.addEventListener("click", () => {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+const passwordInputEl = document.querySelector("#passwordInput");
+const passwordButtonEl = document.querySelector("#passwordButton");
+
+passwordButtonEl.addEventListener("click", () => {
+  if (passwordButtonEl.textContent === "Приховати") {
+    passwordInputEl.setAttribute("type", "password");
+    passwordButtonEl.textContent = "Розкрити";
+    return;
+  }
+  passwordInputEl.setAttribute("type", "text");
+  passwordButtonEl.textContent = "Приховати";
+})
 
 //TODO:==============================================
 /*
