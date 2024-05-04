@@ -88,15 +88,16 @@ addEventListener("click", (event) => {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
-const listItemsEL = document.querySelectorAll('.listItem');
-const btnDoubleEl = document.querySelector('#double');
-btnDoubleEl.addEventListener('click', () => {
-  listItemsEL.forEach(listItem => {
+const listItemsEL = document.querySelectorAll(".listItem");
+const btnDoubleEl = document.querySelector("#double");
+btnDoubleEl.addEventListener("click", () => {
+  listItemsEL.forEach((listItem) => {
     listItem.textContent = BigInt(listItem.textContent) ** 2n;
-  })
-})
+  });
+});
 //TODO:==============================================
 /*
+
 Завдання 7
 При натисканні на коло він повинен слідувати за курсором.
 При повторному натисканні він стає в початкове положення.
@@ -104,3 +105,17 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
 https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
+const koloEl = document.querySelector(".innerCircle");
+koloEl.addEventListener("click", () => {
+  if (koloEl.style.position !== "absolute") {
+    addEventListener("mousemove", (event) => {
+      console.log(event.pageX);
+      koloEl.style.position = "absolute";
+      koloEl.style.top = event.pageY - 15 + "px";
+      koloEl.style.left = event.pageX - 15 + "px";
+      return;
+    });
+  } else {
+    koloEl.style.position = "static";
+  }
+});
