@@ -43,7 +43,7 @@ passwordButtonEl.addEventListener("click", () => {
   }
   passwordInputEl.setAttribute("type", "text");
   passwordButtonEl.textContent = "Приховати";
-})
+});
 
 //TODO:==============================================
 /*
@@ -60,16 +60,14 @@ decreaseEl.addEventListener("click", () => {
 
   boxEl.style.height = boxSize - 10 + "px";
   boxEl.style.width = boxSize - 10 + "px";
-})
+});
 
 increaseEl.addEventListener("click", () => {
   let boxSize = parseInt(getComputedStyle(boxEl).height);
 
   boxEl.style.height = boxSize + 10 + "px";
   boxEl.style.width = boxSize + 10 + "px";
-})
-
-
+});
 
 //TODO:==============================================
 /*
@@ -77,6 +75,13 @@ increaseEl.addEventListener("click", () => {
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
 
+addEventListener("click", (event) => {
+  if (event.target.id === "place") {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+});
 //TODO:==============================================
 /*
 Завдання 6
